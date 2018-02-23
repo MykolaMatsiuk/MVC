@@ -23,7 +23,7 @@ class Router {
     // Get defaults
     $routes = Config::get('routes');
     $this->route = Config::get('default_route');
-    
+    $this->method_prefix = isset($routes($this->route));
   }
 
   /**
